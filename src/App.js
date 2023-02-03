@@ -8,7 +8,7 @@ function App() {
       <header className="App-header">
       
         <NavBar/>
-        <ItemListContainer/>
+        <ItemListContainer greetings="Bienvenido" page="Vintage Clothings"/>
 
       </header>
 
