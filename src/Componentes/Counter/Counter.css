@@ -1,0 +1,36 @@
+.contador-cantidad{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.contador-cantidad p{
+    font-size: 20px;
+    font-weight: 600;
+}
+.contador-cantidad p span{
+    color: #8C52FF;
+    margin-right: 10px;
+}
+.counter{
+    display: flex;
+    align-items: center;
+    width: 200px;
+    height: 50px;
+    justify-content: center;
+    border: 2px solid #8C52FF;
+    border-radius: 20px;
+}
+.button-resta{
+    margin-right: 5px;
+}
+button{
+    color: black;
+    font-weight: 800;
+    width: 26px;
+    height: 30px;
+    padding: 0;
+    border: none;
+    border-radius: 10px;
+    background-color: #ae96df;
+}
