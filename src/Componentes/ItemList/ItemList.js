@@ -4,9 +4,9 @@ const ItemList = ({productList}) => {
   return (
     <div>
         {productList.map((product)=>(
-            <div key={product.id}>
-                <Item product={product}/>
-            </div>  
+
+                <Item key={product.id} product={product}/>
+
             ))}
     </div>
   )
