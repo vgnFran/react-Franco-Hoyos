@@ -9,7 +9,7 @@ function App() {
       <header className="App-header">
       
         <NavBar/>
-        <ItemListContainer/>
+        <ItemListContainer greeting="hola"/>
         
       </header>
 
@@ -18,3 +18,4 @@ function App() {
 }
 
 export default App;
+
