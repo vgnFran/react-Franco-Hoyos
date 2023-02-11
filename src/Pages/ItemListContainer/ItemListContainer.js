@@ -1,25 +1,23 @@
 import "./ItemListContainer.css"
-import { products } from "../../Data/products"
 import { useEffect,useState} from "react"
 import ItemList from "../../Componentes/ItemList/ItemList"
 
-const ItemListContainer= ( {} )=>{
-    const [productList, setProductList]= useState([])
-    const getProducts= new Promise ((resolve, reject)=>{
-        setTimeout(()=>{
-            resolve(products)
-        },2000)
-    })
 
-    useEffect(()=>{
-        getProducts
-        .then((response)=>{
-            setProductList(response)
-        })
-        .catch((error)=>{
-            console.log(error)
-        })
-    },[])
+const ItemListContainer= ( {} )=>{
+
+    const [productList, setProductList]= useState([])
+    
+
+    
+    useEffect(() => {
+        fetch("/data.json")
+          .then((response) => response.json())
+          .then((data) => {
+            console.log(data)
+            setProductList(data); 
+          })
+          .catch((error) => console.log(error));
+      }, []);
 
 
 
