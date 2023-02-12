@@ -6,9 +6,7 @@ import ItemList from "../../Componentes/ItemList/ItemList"
 const ItemListContainer= ( {} )=>{
 
     const [productList, setProductList]= useState([])
-    
-
-    
+        
     useEffect(() => {
         fetch("/data.json")
           .then((response) => response.json())
@@ -22,7 +20,7 @@ const ItemListContainer= ( {} )=>{
 
 
     return(
-        <div>
+        <div >
             <ItemList productList={productList}/>
         </div>
     )
