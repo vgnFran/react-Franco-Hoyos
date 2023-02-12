@@ -1,5 +1,5 @@
 [
-    {"id":"01","nombre":"Buzo Nike Rompeviento","precio":4900,"categoria":"buzo","imagen":"./images/buzo01.jpg","oferta":false},
+    {"id":"01","nombre":"Buzo Nike Rompeviento","precio":4900,"categoria":"buzo","imagen":"images/buzo01.jpg","oferta":false},
     {"id":"02","nombre":"Buzo Mary's","precio":3600,"categoria":"buzo","imagen":"./images/buzo02.jpg","oferta":false},
     {"id":"03","nombre":"Buzo Livingston","precio":4500,"categoria":"buzo","imagen":"./images/buzo03.jpg","oferta":false},
     {"id":"04","nombre":"Buzo Scots Rompeviento","precio":4800,"categoria":"buzo","imagen":"./images/buzo04.jpg","oferta":false},
