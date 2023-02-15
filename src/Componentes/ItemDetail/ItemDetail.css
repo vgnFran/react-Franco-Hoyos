@@ -1,0 +1,46 @@
+.detail-container{
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+}
+.detail{
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+    height: 400px;
+    background-color: #9e6ffc;
+    color: white;
+    border-radius: 10px;
+    box-shadow: -6px 8px 29px -5px rgba(0,0,0,0.67);
+    -webkit-box-shadow: -6px 8px 29px -5px rgba(0,0,0,0.67);
+    -moz-box-shadow: -6px 8px 29px -5px rgba(0,0,0,0.67);
+}
+
+.detail img{
+    border-radius: 10px;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    margin: 0;
+    margin-bottom: 20px;
+}
+
+.detail h2{
+    font-size: 30px;
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+.detail h3{
+    font-size: 24px;
+    margin: 0;
+    margin-bottom: 20px;
+}
+
+.detail button{
+    margin: 0;
+}
