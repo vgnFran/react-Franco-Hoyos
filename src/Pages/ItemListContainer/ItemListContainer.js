@@ -1,23 +1,33 @@
 import "./ItemListContainer.css"
 import { useEffect,useState} from "react"
 import ItemList from "../../Componentes/ItemList/ItemList"
+import { useParams } from "react-router-dom"
 
 
 const ItemListContainer= ( {} )=>{
 
     const [productList, setProductList]= useState([])
+
+    const {categoryId}= useParams()
+    console.log(categoryId)
         
     useEffect(() => {
-        fetch("/data.json")
+        const traer = fetch("/data.json")
           .then((response) => response.json())
           .then((data) => {
-            console.log(data)
+            
+            if (categoryId){
+              console.log("va")
+            }
+
             setProductList(data); 
+            
+            
           })
           .catch((error) => console.log(error));
-      }, []);
+      }, [categoryId]);
 
-
+      
 
     return(
         <div >

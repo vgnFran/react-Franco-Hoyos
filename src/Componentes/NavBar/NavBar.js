@@ -2,6 +2,8 @@ import "./NavBar.css"
 import "../Logo/Logo.js"
 import Logo from "../Logo/Logo.js"
 import CartWidget from "../CartWidget/CartWidget.js";
+import { Link, NavLink } from "react-router-dom";
+import { Cart } from "../../Pages/Cart/Cart";
 
 export default function NavBar(){
     return (
@@ -13,11 +15,12 @@ export default function NavBar(){
                 <div className="input-busqueda">
                     <input type="text" placeholder="¿Buscas algo?"/>
                 </div>
-                <li>Todos los Productos</li>
-                <li>Buzos</li>
-                <li>Remeras</li>
-                <li>Pantalones</li>
-                <li className="carrito"> <CartWidget/> 1</li>
+                <li> <NavLink className={( {isActive} )=> (isActive ? "select" : "not-select") } to="/" > Todos los Productos </NavLink> </li>
+                <li> <NavLink className={( {isActive} )=> (isActive ? "select" : "not-select") } to="/category/buzo"> Buzos </NavLink> </li>
+                <li> <NavLink className={( {isActive} )=> (isActive ? "select" : "not-select") } to="/category/campera"> Camperas </NavLink> </li>
+                <li> <NavLink className={( {isActive} )=> (isActive ? "select" : "not-select") } to="/category/pantalon"> Pantalones </NavLink> </li>
+                <li> <NavLink className={( {isActive} )=> (isActive ? "select" : "not-select") } to="/category/remera"> Remeras </NavLink> </li>
+                <li className="carrito"> <NavLink className={( {isActive} )=> (isActive ? "select" : "not-select") } to="/pages/Cart/Cart"> <CartWidget/> 1 </NavLink> </li>
             </div>
         </div>
     );

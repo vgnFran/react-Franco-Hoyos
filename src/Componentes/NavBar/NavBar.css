@@ -52,3 +52,11 @@
 .input-busqueda input::placeholder{
     color: lightgray;
 }
+
+.select{
+    color: black;
+}
+
+.not-select{
+    color: white;
+}

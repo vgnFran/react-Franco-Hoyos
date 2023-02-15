@@ -7,6 +7,9 @@
     color: white;
     margin-top: 30px;
     margin-left: 30px;
+    box-shadow: -6px 8px 29px -5px rgba(0,0,0,0.67);
+    -webkit-box-shadow: -6px 8px 29px -5px rgba(0,0,0,0.67);
+    -moz-box-shadow: -6px 8px 29px -5px rgba(0,0,0,0.67);
 }
 
 .product .product-name{
