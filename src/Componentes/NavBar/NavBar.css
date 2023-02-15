@@ -60,3 +60,7 @@
 .not-select{
     color: white;
 }
+
+a{
+    text-decoration: none;
+}

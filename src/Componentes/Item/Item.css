@@ -10,6 +10,7 @@
     box-shadow: -6px 8px 29px -5px rgba(0,0,0,0.67);
     -webkit-box-shadow: -6px 8px 29px -5px rgba(0,0,0,0.67);
     -moz-box-shadow: -6px 8px 29px -5px rgba(0,0,0,0.67);
+    text-decoration: none;
 }
 
 .product .product-name{
@@ -52,4 +53,8 @@ button{
     border-radius: 4px;
     color: white;
     
+}
+
+a{
+    text-decoration: none;
 }
