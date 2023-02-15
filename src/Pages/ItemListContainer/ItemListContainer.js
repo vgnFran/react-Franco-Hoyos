@@ -15,14 +15,14 @@ const ItemListContainer= ( {} )=>{
         const traer = fetch("/data.json")
           .then((response) => response.json())
           .then((data) => {
-            
-            if (categoryId){
-              console.log("va")
+          
+            if (categoryId){             
+              const filtre= data.filter((ele)=> ele.categoria == categoryId)
+              setProductList(filtre); 
+            } else {
+              setProductList(data)
             }
-
-            setProductList(data); 
-            
-            
+                      
           })
           .catch((error) => console.log(error));
       }, [categoryId]);

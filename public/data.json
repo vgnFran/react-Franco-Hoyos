@@ -16,7 +16,7 @@
     {"id":"15","nombre":"Campera Matawan","precio":10000,"categoria":"campera","imagen":"/images/campera05.jpg","oferta":false},
     {"id":"16","nombre":"Campera North Face","precio":18000,"categoria":"campera","imagen":"/images/campera06.jpg","oferta":false},
     {"id":"17","nombre":"Campera Lotto","precio":13000,"categoria":"campera","imagen":"/images/campera07.jpg","oferta":false},
-    {"id":"18","nombre":"Campera Nike Rompeviento","precio":14200,"categoria":"campera","imagen":"./images/campera08.jpg","oferta":false},
+    {"id":"18","nombre":"Campera Nike Rompeviento","precio":14200,"categoria":"campera","imagen":"/images/campera08.jpg","oferta":false},
     {"id":"19","nombre":"Campera Alabama","precio":12000,"categoria":"campera","imagen":"/images/campera09.jpg","oferta":true},
     {"id":"20","nombre":"Campera Pierre","precio":10500,"categoria":"campera","imagen":"/images/campera10.jpg","oferta":false},
     {"id":"21","nombre":"Remera Pokemon","precio":4500,"categoria":"remera","imagen":"/images/remera01.jpg","oferta":false},

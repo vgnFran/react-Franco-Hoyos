@@ -6,7 +6,7 @@ const Item = ({product}) => {
 
   if(product.oferta){
     oferta=(product.precio /2)
-    console.log(oferta)
+
   }else{
    oferta= product.precio
   }
