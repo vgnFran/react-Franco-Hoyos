@@ -1,4 +1,4 @@
-import "./Counter.css"
+import "./ItemCount.css"
 import { useState } from "react";
 
 export default function Counter(){
@@ -21,9 +21,9 @@ export default function Counter(){
         <div className="contador-cantidad">
             <div className="counter">
             <p>Cantidad: <span className="span-cantidad">{valorInicial}</span></p>
-            <div>           
+            <div className="container-input">           
                 <button onClick={resta} className="button-resta">-</button>
-                <button onClick={suma}>+</button>
+                <button onClick={suma} className="button-counter">+</button>
             </div>
             </div>
             

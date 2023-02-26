@@ -2,6 +2,7 @@ import "./ItemListContainer.css"
 import { useEffect,useState} from "react"
 import ItemList from "../../Componentes/ItemList/ItemList"
 import { useParams } from "react-router-dom"
+import ItemCount from "../../Componentes/ItemCount/ItemCount"
 
 
 const ItemListContainer= ( {} )=>{
@@ -32,6 +33,7 @@ const ItemListContainer= ( {} )=>{
     return(
         <div >
             <ItemList productList={productList}/>
+            <ItemCount/>
         </div>
     )
 

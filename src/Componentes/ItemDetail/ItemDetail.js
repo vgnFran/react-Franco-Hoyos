@@ -1,5 +1,6 @@
 import "./ItemDetail.css"
 
+
 const ItemDetail = ({detail}) => {
 
    console.log(detail)
