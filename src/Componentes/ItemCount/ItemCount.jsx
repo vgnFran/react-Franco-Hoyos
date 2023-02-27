@@ -1,18 +1,20 @@
 import "./ItemCount.css"
-import { useState } from "react";
 
-export default function Counter(){
-    const [valorInicial,ValorModificado]= useState(0)
+
+export default function ItemCount( {count,setCount,cantidad} ){
+
 
     const resta=()=>{
-        if(valorInicial > 0 ){
-            ValorModificado(valorInicial - 1)
+
+        if(count > 0 && count <=cantidad){
+            setCount(count - 1)
+            
         }  
     }
 
-    const suma=()=>{
-        if (valorInicial < 10){
-            ValorModificado(valorInicial + 1)
+    const onAdd=()=>{
+        if (count < cantidad){
+            setCount(count + 1)
         }
     }
 
@@ -20,10 +22,10 @@ export default function Counter(){
         
         <div className="contador-cantidad">
             <div className="counter">
-            <p>Cantidad: <span className="span-cantidad">{valorInicial}</span></p>
+            <p className="p-counter">Cantidad: <span className="span-cantidad">{count}</span></p>
             <div className="container-input">           
                 <button onClick={resta} className="button-resta">-</button>
-                <button onClick={suma} className="button-counter">+</button>
+                <button onClick={onAdd} className="button-counter">+</button>
             </div>
             </div>
             
