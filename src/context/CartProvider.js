@@ -7,20 +7,27 @@ const CartProvider = ({children}) => {
     const [cart,setCart]=useState([])
 
     const addItem = (item,quantity)=>{
-        const cartProduct= {
-            id: item.id,
-            nombre: item.nombre,
-            precio: item.precio,
-            categoria: item.categoria,
-            imagen: item.imagen,
-            cantidad:item.cantidad,
-            quantity:quantity
+        if(quantity>0){
+            const cartProduct= {
+                id: item.id,
+                nombre: item.nombre,
+                precio: item.precio,
+                categoria: item.categoria,
+                imagen: item.imagen,
+                cantidad:item.cantidad,
+                quantity:quantity
+            }
+            setCart([...cart,cartProduct])
         }
-        setCart([...cart,cartProduct])
+        
+    }
+
+    const clear= ()=>{
+      setCart([])
     }
 
   return (
-    <CartContext.Provider value={{cart, addItem}}>{children}</CartContext.Provider>
+    <CartContext.Provider value={{cart, addItem, clear}}>{children}</CartContext.Provider>
   )
 }
 export default CartProvider

@@ -7,9 +7,12 @@ const ItemList = ({productList}) => {
   return (
     <div className="body-list">
         {productList.map((product)=>(
-                <Link to={`/item/${product.id}`}>
+                <div key={product.id}>
+                  <Link to={`/item/${product.id}`}>
                   <Item key={product.id} product={product}/>
                 </Link>
+                </div>
+                
                 
           ))}
     </div>

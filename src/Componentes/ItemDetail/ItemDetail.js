@@ -25,11 +25,11 @@ const ItemDetail = ({detail}) => {
 
         <ItemCount count={count} setCount={setCount} cantidad={detail.cantidad}/>
 
-        <button onClick={()=> addItem(detail,count)}>Agregar al Carrito</button>
+        <button className="button-proDetail" onClick={()=> addItem(detail,count)}>Agregar al Carrito</button>
 
         <div className="buttons-fin">
-          <button onClick={()=>{navigate('/')}}>Seguir comprando</button>
-          <button onClick={()=>{navigate('/cart')}}>Finalizar Compra</button>    
+          <button className="button-proDetail" onClick={()=>{navigate('/')}}>Seguir comprando</button>
+          <button className="button-proDetail" onClick={()=>{navigate('/cart')}}>Finalizar Compra</button>    
         </div>
 
       </div>

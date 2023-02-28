@@ -22,7 +22,7 @@ const Item = ({product}) => {
           <p className="product-price">$ {oferta}</p>
         </div>
 
-        <button id={product.id}>Agregar al Carrito</button>
+        {/* <button id={product.id}>Agregar al Carrito</button> */}
 
     </div>
   )

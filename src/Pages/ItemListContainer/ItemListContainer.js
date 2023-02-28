@@ -10,7 +10,7 @@ const ItemListContainer= ( {} )=>{
     const [productList, setProductList]= useState([])
 
     const {categoryId}= useParams()
-    console.log(categoryId)
+
         
     useEffect(() => {
         const traer = fetch("/data.json")
