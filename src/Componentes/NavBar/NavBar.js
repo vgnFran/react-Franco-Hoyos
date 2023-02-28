@@ -20,7 +20,7 @@ export default function NavBar(){
                 <li> <NavLink className={( {isActive} )=> (isActive ? "select" : "not-select") } to="/category/campera"> Camperas </NavLink> </li>
                 <li> <NavLink className={( {isActive} )=> (isActive ? "select" : "not-select") } to="/category/pantalon"> Pantalones </NavLink> </li>
                 <li> <NavLink className={( {isActive} )=> (isActive ? "select" : "not-select") } to="/category/remera"> Remeras </NavLink> </li>
-                <li className="carrito"> <NavLink className={( {isActive} )=> (isActive ? "select" : "not-select") } to="/pages/Cart/Cart"> <CartWidget/> 1 </NavLink> </li>
+                <li className="carrito"> <NavLink className={( {isActive} )=> (isActive ? "select" : "not-select") } to="/pages/Cart/Cart"> <CartWidget/></NavLink> </li>
             </div>
         </div>
     );

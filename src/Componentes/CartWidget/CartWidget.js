@@ -1,6 +1,16 @@
 import { BsCart } from "react-icons/bs";
-export default function Carrito(){
+import { useContext } from "react";
+import { CartContext } from "../../context/CartContext";
+
+export default function CartWidget(){
+
+    const {cart}= useContext(CartContext)
+    console.log(cart)
+    
     return (
-        <BsCart/>
+        <div style={{display:"flex",alignItems:"center"}}>
+            <BsCart/>
+            <div style={{marginLeft:"4px"}}>{cart?.length}</div>
+        </div>
     )
 }
