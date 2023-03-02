@@ -24,6 +24,7 @@ const ItemDetailContainer = () => {
   },[id])
 
   console.log(productId)
+
   
   return (
     <div><ItemDetail detail={productId}/></div>
