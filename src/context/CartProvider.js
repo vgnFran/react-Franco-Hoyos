@@ -5,7 +5,7 @@ import { useState } from "react";
 const CartProvider = ({children}) => {
 
     const [cart,setCart]=useState([])
-    const [addQuantity, setAddQuantity]=useState(0) 
+
     const addItem = (item,quantity)=>{
         if(quantity>0){
 
@@ -32,8 +32,6 @@ const CartProvider = ({children}) => {
             }
             setCart([...cart,cartProduct])
             }
-
-
 
         }
         
