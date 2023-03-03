@@ -13,7 +13,7 @@ const ItemDetail = ({detail}) => {
   
   const navigate= useNavigate()  
 
-  const {addItem} = useContext(CartContext)
+  const {addItem, inCart} = useContext(CartContext)
   
   return (
     <div className="detail-container">
@@ -25,7 +25,7 @@ const ItemDetail = ({detail}) => {
 
         <ItemCount count={count} setCount={setCount} cantidad={detail.cantidad}/>
 
-        <button className="button-proDetail" onClick={()=> addItem(detail,count)}>Agregar al Carrito</button>
+        <button className="button-proDetail" onClick={()=> addItem(detail,count) }>Agregar al Carrito</button>
 
         <div className="buttons-fin">
           <button className="button-proDetail" onClick={()=>{navigate('/')}}>Seguir comprando</button>

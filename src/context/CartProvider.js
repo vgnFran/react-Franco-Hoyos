@@ -5,10 +5,23 @@ import { useState } from "react";
 const CartProvider = ({children}) => {
 
     const [cart,setCart]=useState([])
-
+    const [addQuantity, setAddQuantity]=useState(0) 
     const addItem = (item,quantity)=>{
         if(quantity>0){
-            const cartProduct= {
+
+            if(inCart(item.id)){
+              const cartRepeated = cart.map((prod)=>{
+                if( prod.id == item.id){
+                  prod.quantity = prod.quantity + quantity
+                  return prod
+                } else {
+                  return prod
+                }
+              })
+              setCart(cartRepeated)
+
+            } else{
+              const cartProduct= {
                 id: item.id,
                 nombre: item.nombre,
                 precio: item.precio,
@@ -18,6 +31,10 @@ const CartProvider = ({children}) => {
                 quantity:quantity
             }
             setCart([...cart,cartProduct])
+            }
+
+
+
         }
         
     }
@@ -33,9 +50,17 @@ const CartProvider = ({children}) => {
       setCart(deletedCart)
     }
 
-    
+    const inCart =(productId)=>{
+      if(cart.find(prod => prod.id == productId)){
+        return true
+      }else{
+        return false
+      }
+     
+    }
+
   return (
-    <CartContext.Provider value={{cart, addItem, clear, deleteProduct}}>{children}</CartContext.Provider>
+    <CartContext.Provider value={{cart, addItem, clear, deleteProduct,inCart}}>{children}</CartContext.Provider>
   )
 }
 export default CartProvider

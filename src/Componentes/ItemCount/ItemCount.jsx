@@ -8,7 +8,7 @@ export default function ItemCount( {count,setCount,cantidad} ){
 
         if(count > 0 && count <=cantidad){
             setCount(count - 1)
-            
+        
         }  
     }
 
@@ -16,6 +16,7 @@ export default function ItemCount( {count,setCount,cantidad} ){
         if (count < cantidad){
             setCount(count + 1)
         }
+
     }
 
     return(

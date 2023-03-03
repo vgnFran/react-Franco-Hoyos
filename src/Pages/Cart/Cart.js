@@ -11,6 +11,7 @@ export const Cart = () => {
       {cart.map((prod)=>(
           <div key={prod.nombre}>
             <p>{prod.nombre}</p>
+            <p>{prod.quantity}</p>
             <button id={prod.id} onClick={()=>{
               const id= prod.id
               deleteProduct(prod,id)
