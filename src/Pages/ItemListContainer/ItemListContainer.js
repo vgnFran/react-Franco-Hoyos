@@ -2,6 +2,7 @@ import "./ItemListContainer.css"
 import { useEffect,useState} from "react"
 import ItemList from "../../Componentes/ItemList/ItemList"
 import { useParams } from "react-router-dom"
+import { getFirestore, getDocs, collection } from "firebase/firestore"
 import ItemCount from "../../Componentes/ItemCount/ItemCount"
 
 
@@ -11,21 +12,40 @@ const ItemListContainer= ( {} )=>{
 
     const {categoryId}= useParams()
 
+
+    const getInfo=()=>{
+      const db= getFirestore()
+      const query= collection(db,"products")
+      getDocs(query)
+      .then((res)=>{
+        const list = res.docs.map((doc)=>{
+          return {
+            id:doc.id,
+            ...doc.data()
+          }
+        })
+        console.log(list)
+      })
+      .catch((err)=> console.log(err))
+    }
+
+
         
     useEffect(() => {
-        const traer = fetch("/data.json")
-          .then((response) => response.json())
-          .then((data) => {
+        getInfo()
+          // getInfo
+          // .then((response) => response.json())
+          // .then((data) => {
           
-            if (categoryId){             
-              const filtre= data.filter((ele)=> ele.categoria == categoryId)
-              setProductList(filtre); 
-            } else {
-              setProductList(data)
-            }
+          //   if (categoryId){             
+          //     const filtre= data.filter((ele)=> ele.categoria == categoryId)
+          //     setProductList(filtre); 
+          //   } else {
+          //     setProductList(data)
+          //   }
                       
-          })
-          .catch((error) => console.log(error));
+          // })
+          // .catch((error) => console.log(error));
       }, [categoryId]);
 
       
