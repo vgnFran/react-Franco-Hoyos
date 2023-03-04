@@ -24,7 +24,7 @@ const ItemListContainer= ( {} )=>{
             ...doc.data()
           }
         })
-        console.log(list)
+        setProductList(list)
       })
       .catch((err)=> console.log(err))
     }
@@ -32,9 +32,8 @@ const ItemListContainer= ( {} )=>{
 
         
     useEffect(() => {
-        getInfo()
+          getInfo()
           // getInfo
-          // .then((response) => response.json())
           // .then((data) => {
           
           //   if (categoryId){             
