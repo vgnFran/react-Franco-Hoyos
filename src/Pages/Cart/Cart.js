@@ -3,10 +3,11 @@ import { useContext } from 'react'
 import { CartContext } from '../../context/CartContext'
 import { useNavigate } from 'react-router-dom'
 import { collection, addDoc, getFirestore, doc, updateDoc } from 'firebase/firestore'
+import "./Cart.css"
 
 export const Cart = () => {
   const navigate= useNavigate()
-  const { cart, clear, deleteProduct } = useContext(CartContext)
+  const { cart, clear, deleteProduct, total } = useContext(CartContext)
   console.log(cart)
   const db= getFirestore()
 
@@ -27,7 +28,7 @@ export const Cart = () => {
           quantity: product.quantity
         })
       }),
-      total: cart.reduce((acc,curr)=> acc + curr.precio * curr.quantity, 0)
+      total:total
     } )
     .then((resp)=>{
       alert (`Orden ${resp.id} creada`)
@@ -51,11 +52,13 @@ export const Cart = () => {
   } 
 
   return (
-    <div>
+    <div className='container-cart'>
       {cart.map((prod)=>(
-          <div key={prod.nombre}>
+          <div key={prod.nombre} className="prod-cart"> 
+            <img src={`/images/${prod.imagen}`} alt={prod.nombre} />
             <p>{prod.nombre}</p>
-            <p>{prod.quantity}</p>
+            <p>{`Precio: $${prod.precio}`}</p>
+            <p>{`Cantidad: ${prod.quantity}`}</p>
             <button id={prod.id} onClick={()=>{
               const id= prod.id
               deleteProduct(prod,id)
@@ -63,7 +66,7 @@ export const Cart = () => {
           </div>
         ))}
         {cart.length >0 && (
-          <div>
+          <div className='buttons-cart'>
             <button onClick={()=>{clear()}}>Vaciar Carrito</button>
             <button onClick={()=> navigate("/")}>Seguir comprando</button>
             <div>

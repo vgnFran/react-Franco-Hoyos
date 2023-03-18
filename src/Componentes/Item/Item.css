@@ -1,7 +1,7 @@
 .product{
     background-color:#ad86fa;
     width: 280px;
-    height: 410px;
+    height: 380px;
     border: 1px solid rgb(158, 158, 158);
     border-radius: 10px;
     color: white;
@@ -57,4 +57,8 @@
 
 a{
     text-decoration: none;
+}
+
+button{
+    cursor: pointer;
 }
