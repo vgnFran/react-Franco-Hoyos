@@ -16,34 +16,34 @@ const ItemListContainer= ( {} )=>{
     const db= getFirestore()
     const querySnap= collection(db,"products")
 
-    if(categoryId){
-      const queryFilter = query(querySnap, where("categoria","==",categoryId))
-        getDocs(queryFilter)
-        .then((res)=>{
-          const list = res.docs.map((doc)=>{
-            return {
-              id:doc.id,
-              ...doc.data()
-            }
-          })
-          setProductList(list)
-        })
-        .catch((err)=> console.log(err))
-      }
+      if(categoryId){
+        const queryFilter = query(querySnap, where("categoria","==",categoryId))
+          getDocs(queryFilter)
+            .then((res)=>{
+              const list = res.docs.map((doc)=>{
+                return {
+                  id:doc.id,
+                  ...doc.data()
+                }
+              })
+              setProductList(list)
+            })
+            .catch((err)=> console.log(err))
+          }
       
-      else {
-        getDocs(querySnap)
-        .then((res)=>{
-          const list = res.docs.map((doc)=>{
-            return {
-              id:doc.id,
-              ...doc.data()
-            }
-          })
-          setProductList(list)
-        })
-        .catch((err)=> console.log(err))
-      }
+          else {
+            getDocs(querySnap)
+            .then((res)=>{
+              const list = res.docs.map((doc)=>{
+                return {
+                  id:doc.id,
+                  ...doc.data()
+                }
+              })
+              setProductList(list)
+            })
+            .catch((err)=> console.log(err))
+          }
 
       }
 
@@ -53,19 +53,6 @@ const ItemListContainer= ( {} )=>{
         
     useEffect(() => {
           getInfo()
-          // getInfo
-          // .then((data) => {
-          
-          //   if (categoryId){             
-          //     const filtre= data.filter((ele)=> ele.categoria == categoryId)
-          //     setProductList(filtre); 
-          //   } else {
-          //     setProductList(data)
-          //   }
-                      
-          // })
-          // .catch((error) => console.log(error));
-
       }, [categoryId]);
 
       
