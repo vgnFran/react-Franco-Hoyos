@@ -67,9 +67,14 @@ export const Cart = () => {
         ))}
         {cart.length >0 && (
           <div className='buttons-cart'>
-            <button onClick={()=>{clear()}}>Vaciar Carrito</button>
-            <button onClick={()=> navigate("/")}>Seguir comprando</button>
             <div>
+              <p className='total'>{`Total: $${total}`}</p>
+            </div>
+            <div className='container-buttons'>
+            <button onClick={()=>{clear()}} className="vaciar">Vaciar Carrito</button>
+            <button onClick={()=> navigate("/")}>Seguir comprando</button>
+            </div>
+            <div className='final'>
               <button onClick={()=> createOrder()}>Finalizar Compra</button>
             </div>
           </div>

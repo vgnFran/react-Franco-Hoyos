@@ -45,3 +45,34 @@
 button{
     cursor: pointer;
 }
+
+.total{
+    font-size: 28px;
+    color: #7c51d3;
+}
+
+.buttons-cart{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.buttons-cart button{
+    background-color: #a074f8;
+    color: white;
+    font-size: 16px;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.buttons-cart .final button{
+    background-color: rgb(52, 52, 223);
+    margin-top: 20px;
+}
+
+.container-buttons .vaciar{
+    margin-right: 20px;
+}
