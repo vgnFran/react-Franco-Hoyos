@@ -1,6 +1,6 @@
 import "./ItemDetail.css"
 import ItemCount from "../ItemCount/ItemCount"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom"
 import { useContext } from "react"
 import { CartContext } from "../../context/CartContext"
@@ -9,7 +9,10 @@ import { CartContext } from "../../context/CartContext"
 const ItemDetail = ({detail}) => {
 
   const [count,setCount]= useState(1)
-
+  
+  useEffect(()=>{
+    setCount(detail.cantidad == 0? 0 : 1)
+  },[detail])
   
   const navigate= useNavigate()  
 
@@ -26,7 +29,7 @@ const ItemDetail = ({detail}) => {
 
         <ItemCount count={count} setCount={setCount} cantidad={detail.cantidad}/>
 
-        <button className="button-proDetail" onClick={()=> addItem(detail,count) }>Agregar al Carrito</button>
+        <button disabled={detail.cantidad == 0} className="button-proDetail" onClick={()=> addItem(detail,count) }>Agregar al Carrito</button>
 
         <div className="buttons-fin">
           <button className="button-proDetail" onClick={()=>{navigate('/')}}>Seguir comprando</button>
