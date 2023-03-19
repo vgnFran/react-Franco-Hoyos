@@ -1,0 +1,257 @@
+[33mcommit 4e97e9b4a0ace24351495be85d20a5b9c2da8d0e[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m)[m
+Author: vgnFran <francohoyos2112@gmail.com>
+Date:   Sun Mar 19 20:27:36 2023 -0300
+
+    Add design file
+
+[33mcommit 5174541bf6049483f4e6aabd16dcfa346852b0d7[m
+Author: vgnFran <francohoyos2112@gmail.com>
+Date:   Sun Mar 19 20:20:41 2023 -0300
+
+    ?
+
+[33mcommit 2e7c065b7e385471295fcdf35d523080d81515ff[m
+Author: vgnFran <francohoyos2112@gmail.com>
+Date:   Sun Mar 19 20:10:29 2023 -0300
+
+    toasty/ gif
+
+[33mcommit bb3151594273b335f4216aa726a36ab92f82eaf5[m
+Author: vgnFran <francohoyos2112@gmail.com>
+Date:   Sun Mar 19 19:35:50 2023 -0300
+
+    toastify/ gif
+
+[33mcommit 4d48be6eecb50b6d6d366ae3317e9bfe86b4299f[m
+Author: vgnFran <francohoyos2112@gmail.com>
+Date:   Sun Mar 19 19:31:33 2023 -0300
+
+    toastify/ gif
+
+[33mcommit 5eaad0817fdb7457beefc670d160f4e4de7c54a3[m[33m ([m[1;31morigin/main[m[33m)[m
+Author: vgnFran <francohoyos2112@gmail.com>
+Date:   Sun Mar 19 18:46:58 2023 -0300
+
+    swal
+
+[33mcommit 84edb8b7a8d1350b5ab242bd393b2573f0edebc4[m
+Author: vgnFran <francohoyos2112@gmail.com>
+Date:   Sun Mar 19 18:14:41 2023 -0300
+
+    confirm email
+
+[33mcommit ff22042c275b77b08252ed6b4721fb7d39efb11f[m
+Author: vgnFran <francohoyos2112@gmail.com>
+Date:   Sun Mar 19 17:25:43 2023 -0300
+
+    readme
+
+[33mcommit 5776e82130c79091f7d453cce0e98990d78db614[m
+Author: vgnFran <francohoyos2112@gmail.com>
+Date:   Sun Mar 19 17:04:56 2023 -0300
+
+    input orders
+
+[33mcommit a2c1ed106df4a004363286f24b605cfaada9414a[m
+Author: vgnFran <francohoyos2112@gmail.com>
+Date:   Sun Mar 19 01:25:40 2023 -0300
+
+    counter cart
+
+[33mcommit 6d7eda0d283e88aa0f499e56fcbe2a17c6c7ca80[m
+Author: vgnFran <francohoyos2112@gmail.com>
+Date:   Sat Mar 18 01:14:11 2023 -0300
+
+    cart ok
+
+[33mcommit dc143010de1cb70d9a8c40fa825e481ee9bda25b[m
+Author: vgnFran <francohoyos2112@gmail.com>
+Date:   Sat Mar 18 00:57:06 2023 -0300
+
+    total/ css
+
+[33mcommit 0f6002c5f2695e32bc4709e3fd9464e7d4057571[m
+Author: vgnFran <francohoyos2112@gmail.com>
+Date:   Fri Mar 17 22:47:16 2023 -0300
+
+    stock
+
+[33mcommit 9b5beab40bf953ac0b1c6d9e95161b100ed41608[m
+Author: vgnFran <francohoyos2112@gmail.com>
+Date:   Fri Mar 17 21:18:20 2023 -0300
+
+    orders
+
+[33mcommit b7d2fcfc340779c3f00cff8567c8cf5d38a6d435[m
+Author: vgnFran <francohoyos2112@gmail.com>
+Date:   Wed Mar 8 18:09:08 2023 -0300
+
+    filter
+
+[33mcommit 7d4f33011dcaaa91fc23de37e09234da501e8d0d[m
+Author: vgnFran <francohoyos2112@gmail.com>
+Date:   Fri Mar 3 23:35:02 2023 -0300
+
+    detail prod
+
+[33mcommit 22ed0d02397ca632d3c5fb964f35832065b2b62b[m
+Author: vgnFran <francohoyos2112@gmail.com>
+Date:   Fri Mar 3 23:22:28 2023 -0300
+
+    finished products
+
+[33mcommit 3808f552965e16ae3c66283c88ece02632b6882e[m
+Author: vgnFran <francohoyos2112@gmail.com>
+Date:   Fri Mar 3 23:08:36 2023 -0300
+
+    getprods
+
+[33mcommit c0cd99b67f746ab4aa4b66c5891b5e17f893ce01[m
+Author: vgnFran <francohoyos2112@gmail.com>
+Date:   Fri Mar 3 21:46:15 2023 -0300
+
+    connect firebase
+
+[33mcommit aaf03ddcc0bf3506b4d565be1bb67d59a296ed85[m
+Author: vgnFran <francohoyos2112@gmail.com>
+Date:   Fri Mar 3 19:01:02 2023 -0300
+
+    reduce cart
+
+[33mcommit 7f880b928a371fcd2ded942c33facea61026dacd[m
+Author: vgnFran <francohoyos2112@gmail.com>
+Date:   Fri Mar 3 18:36:36 2023 -0300
+
+    inCart
+
+[33mcommit 843e8393c5ea8a99abc6c10531294cc0873c381a[m
+Author: vgnFran <francohoyos2112@gmail.com>
+Date:   Thu Mar 2 18:36:00 2023 -0300
+
+    deleted product
+
+[33mcommit eb75da1e2fee8e639192909354230c6611b24249[m
+Author: vgnFran <francohoyos2112@gmail.com>
+Date:   Tue Feb 28 18:54:50 2023 -0300
+
+    clear cart
+
+[33mcommit 6a0a71d95081342e766a9ba85a213b66fb0f2a1b[m
+Author: vgnFran <francohoyos2112@gmail.com>
+Date:   Tue Feb 28 02:46:11 2023 -0300
+
+    tocart
+
+[33mcommit c75fd24e40a1dd5b2dee01f2cecb9dd7d63ecac0[m
+Author: vgnFran <francohoyos2112@gmail.com>
+Date:   Tue Feb 28 00:01:06 2023 -0300
+
+    fix routes
+
+[33mcommit d8afdc3231711d0e565c5d49b5f4973d61cec9ef[m
+Author: vgnFran <francohoyos2112@gmail.com>
+Date:   Mon Feb 27 00:25:52 2023 -0300
+
+    buttons cart
+
+[33mcommit bbefde388c76a07f79bd990719b128142970dbd0[m
+Author: vgnFran <francohoyos2112@gmail.com>
+Date:   Sun Feb 26 23:49:55 2023 -0300
+
+    counter detail
+
+[33mcommit 98741a28cdb9aa6e556667cf0c802eeb8f9d64a1[m
+Author: vgnFran <francohoyos2112@gmail.com>
+Date:   Sun Feb 26 20:21:18 2023 -0300
+
+    styles counter
+
+[33mcommit c4e5435c561566a009bdf786ddf8796a829b1f20[m
+Author: vgnFran <francohoyos2112@gmail.com>
+Date:   Wed Feb 15 17:31:38 2023 -0300
+
+    styles
+
+[33mcommit 6ade503f0d5883e45fcd1c7a6fd171a4ae51da06[m
+Author: vgnFran <francohoyos2112@gmail.com>
+Date:   Wed Feb 15 17:28:04 2023 -0300
+
+    listo
+
+[33mcommit f68ca108580648ff49477388a7312121f2d4facb[m
+Author: vgnFran <francohoyos2112@gmail.com>
+Date:   Wed Feb 15 16:16:15 2023 -0300
+
+    filter
+
+[33mcommit 181b7d9380cd21746713192a09ea3aff01b81eb2[m
+Author: vgnFran <francohoyos2112@gmail.com>
+Date:   Wed Feb 15 01:10:17 2023 -0300
+
+    links
+
+[33mcommit 2a2678d886766f482e516b9a5cf928a3dbdf8612[m
+Author: vgnFran <francohoyos2112@gmail.com>
+Date:   Sun Feb 12 20:01:51 2023 -0300
+
+    body productos
+
+[33mcommit bc89d84819cced7d7a5a711e60a8dca6abcf6821[m
+Author: vgnFran <francohoyos2112@gmail.com>
+Date:   Sun Feb 12 19:54:43 2023 -0300
+
+    styles producto
+
+[33mcommit bb3efa897b69b4f4226ec12164d1695f4cf5a09e[m
+Author: vgnFran <francohoyos2112@gmail.com>
+Date:   Fri Feb 10 21:49:37 2023 -0300
+
+    fecth local
+
+[33mcommit 8e8ec7673bf2122f82eb51fc3805ca8cb2a731fe[m
+Author: vgnFran <francohoyos2112@gmail.com>
+Date:   Wed Feb 8 01:19:07 2023 -0300
+
+    funciona
+
+[33mcommit 7c8bbedf5b872f06b792c993a99e14e0df5f08b9[m
+Author: vgnFran <francohoyos2112@gmail.com>
+Date:   Wed Feb 8 01:15:58 2023 -0300
+
+    sufrir
+
+[33mcommit 87e310671a15f9430406dff9ad39e78755a69947[m
+Author: vgnFran <francohoyos2112@gmail.com>
+Date:   Tue Feb 7 23:43:29 2023 -0300
+
+    estructura
+
+[33mcommit c576b1bcf11acd7f3890fabb042b6fc936a8129c[m
+Author: vgnFran <francohoyos2112@gmail.com>
+Date:   Fri Feb 3 01:01:33 2023 -0300
+
+    counter
+
+[33mcommit cd63d59718079b88396a309de69a545010690ee5[m
+Author: vgnFran <francohoyos2112@gmail.com>
+Date:   Fri Feb 3 00:17:45 2023 -0300
+
+    itemlistcontainer
+
+[33mcommit 31385f8e38cbaea3131bdec71ea211a76e8f7d29[m
+Author: vgnFran <francohoyos2112@gmail.com>
+Date:   Thu Feb 2 23:56:25 2023 -0300
+
+    entrega
+
+[33mcommit 3d08f8df28c4284548711b4749392867e23fce6d[m
+Author: vgnFran <francohoyos2112@gmail.com>
+Date:   Thu Feb 2 23:38:20 2023 -0300
+
+    git
+
+[33mcommit c030f38297a3093a5283597e61c4cc555114b06c[m
+Author: vgnFran <francohoyos2112@gmail.com>
+Date:   Thu Feb 2 23:22:25 2023 -0300
+
+    navbar fin
