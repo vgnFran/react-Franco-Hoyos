@@ -4,6 +4,8 @@ import { useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom"
 import { useContext } from "react"
 import { CartContext } from "../../context/CartContext"
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 const ItemDetail = ({detail}) => {
@@ -16,7 +18,7 @@ const ItemDetail = ({detail}) => {
   
   const navigate= useNavigate()  
 
-  const {addItem, inCart} = useContext(CartContext)
+  const {addItem, inCart, notification} = useContext(CartContext)
   
   return (
     <div className="detail-container">
@@ -38,7 +40,7 @@ const ItemDetail = ({detail}) => {
         </div>
 
       </div>
-        
+      <ToastContainer toastStyle={{ backgroundColor: "#9e6ffc", color:"white" }}/>
     </div>
   )
 }

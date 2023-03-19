@@ -1,10 +1,24 @@
 import { useContext, useEffect } from "react";
 import { CartContext} from "./CartContext";
 import { useState } from "react";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const CartProvider = ({children}) => {
 
     const [cart,setCart]=useState([])
+    const notification=(nombre)=>{
+      toast(nombre, {
+        position: "bottom-right",
+        autoClose: 1500,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "colored",
+        });
+    }
 
     const addItem = (item,quantity)=>{
         if(quantity>0){
@@ -19,6 +33,8 @@ const CartProvider = ({children}) => {
                 }
               })
               setCart(cartRepeated)
+              notification(`Producto ${item.nombre} Agregado al Carrito`)
+
 
             } else{
               const cartProduct= {
@@ -31,7 +47,7 @@ const CartProvider = ({children}) => {
                 quantity:quantity
             }
             setCart([...cart,cartProduct])
-            // console.log(`prod ${item.nombre} agregao`)
+            notification(`Producto ${item.nombre} Agregado al Carrito`)
             }
 
         }
@@ -79,7 +95,7 @@ const CartProvider = ({children}) => {
     },[cart])
 
   return (
-    <CartContext.Provider value={{cart, addItem, clear, deleteProduct,inCart, total, setCart, updateItem}}>{children}</CartContext.Provider>
+    <CartContext.Provider value={{cart, addItem, clear, deleteProduct,inCart, total, setCart, updateItem, notification}}>{children}  </CartContext.Provider>
   )
 }
 export default CartProvider
