@@ -6,3 +6,4 @@ Vintage Clothes es un Ecommerce de ropa vintage, en la que nos encontramos con u
 # Librerias utilizadas:
 -React icons: https://www.npmjs.com/package/react-icons
 -Sweetalert2: https://sweetalert2.github.io/
+-Toastify: https://www.npmjs.com/package/react-toastify
