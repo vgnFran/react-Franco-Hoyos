@@ -13,7 +13,7 @@ export default function NavBar(){
             </div>
             <div className="navbar">
                 <div className="input-busqueda">
-                    <input type="text" placeholder="¿Buscas algo?"/>
+                    {/* <input type="text" placeholder="¿Buscas algo?"/> */}
                 </div>
                 <li> <NavLink className={( {isActive} )=> (isActive ? "select" : "not-select") } to="/" > Todos los Productos </NavLink> </li>
                 <li> <NavLink className={( {isActive} )=> (isActive ? "select" : "not-select") } to="/category/buzo"> Buzos </NavLink> </li>

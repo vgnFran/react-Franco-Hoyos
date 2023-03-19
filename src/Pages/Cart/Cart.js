@@ -9,17 +9,20 @@ import ItemCart from './ItemCart'
 
 export const Cart = () => {
   const navigate= useNavigate()
-  const { cart, clear, deleteProduct, total } = useContext(CartContext)
+  const { cart, clear, deleteProduct, total, setCart } = useContext(CartContext)
   console.log(cart)
   const db= getFirestore()
-  // const [quantity,setQuantity] = useState(0)
-
+  const [formValue, setFormValue] = useState({
+    name:"",
+    phone:"",
+    email:""
+  })
   const createOrder=()=>{
     const query= collection(db, "orders")
     const buyer= {
-      email: "prueba@prueba.com",
-      nombre: "Franco",
-      telefono: "1131741010"
+      email: formValue.email,
+      nombre: formValue.name,
+      telefono: formValue.phone
     }
     addDoc(query,{
       buyer: buyer,
@@ -54,6 +57,16 @@ export const Cart = () => {
     });
   } 
 
+  const completeImputs=(e)=>{
+    console.log(e.target.value)
+    console.log(e.target.name)
+    setFormValue({
+      ...formValue,
+      [e.target.name]:e.target.value,
+    })
+
+  }
+
   return (
     <div className='container-cart'>
       {cart.map((prod)=>(
@@ -67,16 +80,30 @@ export const Cart = () => {
         ))}
         {cart.length >0 && (
           <div className='buttons-cart'>
+
             <div>
               <p className='total'>{`Total: $${total}`}</p>
             </div>
+
             <div className='container-buttons'>
             <button onClick={()=>{clear()}} className="vaciar">Vaciar Carrito</button>
             <button onClick={()=> navigate("/")}>Seguir comprando</button>
             </div>
-            <div className='final'>
-              <button onClick={()=> createOrder()}>Finalizar Compra</button>
+
+            <div className='form-container'>
+              <form>
+                <input type="text" placeholder='Nombre' value={formValue.name} onChange={completeImputs} name="name"/>
+                <input type="text" placeholder='Telefono' value={formValue.phone} onChange={completeImputs} name="phone"/>
+                <input type="email" placeholder='Email' value={formValue.email} onChange={completeImputs} name="email"/>
+              </form>
+              <button onClick={()=> {
+                if(formValue.name != "" && formValue.email != "" && formValue.phone != ""){
+                  createOrder()
+                  setCart([])
+                }
+              }}>Finalizar Compra</button>
             </div>
+
           </div>
         )}
         {cart.length == 0 && <p>No hay productos en el Carrito.</p>}

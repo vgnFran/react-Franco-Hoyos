@@ -3,9 +3,7 @@ import "./ItemCount.css"
 
 export default function ItemCount( {count,setCount,cantidad} ){
 
-
     const resta=()=>{
-
         if(count > 0 && count <=cantidad){
             setCount(count - 1)
         
@@ -16,11 +14,9 @@ export default function ItemCount( {count,setCount,cantidad} ){
         if (count < cantidad){
             setCount(count + 1)
         }
-
     }
 
-    return(
-        
+    return(       
         <div className="contador-cantidad">
             <div className="counter">
             <p className="p-counter">Cantidad: <span className="span-cantidad">{count}</span></p>

@@ -60,7 +60,6 @@ const ItemListContainer= ( {} )=>{
     return(
         <div >
             <ItemList productList={productList}/>
-            <ItemCount/>
         </div>
     )
 

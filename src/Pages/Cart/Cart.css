@@ -68,11 +68,6 @@ button{
     border-radius: 4px;
 }
 
-.buttons-cart .final button{
-    background-color: rgb(52, 52, 223);
-    margin-top: 20px;
-}
-
 .container-buttons .vaciar{
     margin-right: 20px;
 }
@@ -81,4 +76,20 @@ button{
     margin-right: 60px;
     margin-left: 0!important;
     margin-top: 14px!important;
+}
+
+.form-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+.form-container input{
+    height: 26px;
+    width: 180px;
+    margin-right: 10px;
+}
+.form-container button{
+    background-color: rgb(52, 52, 223);
 }
