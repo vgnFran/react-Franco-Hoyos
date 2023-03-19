@@ -76,3 +76,9 @@ button{
 .container-buttons .vaciar{
     margin-right: 20px;
 }
+
+.button-quit{
+    margin-right: 60px;
+    margin-left: 0!important;
+    margin-top: 14px!important;
+}

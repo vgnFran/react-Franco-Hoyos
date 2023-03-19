@@ -59,12 +59,26 @@ const CartProvider = ({children}) => {
 
     const [total, setTotal]=useState(0)
 
+    const updateItem= (prodId,newQuantity)=>{
+      const newCart= cart.map( (prod)=>{
+        if (prodId == prod.id){
+          return{
+            ...prod,
+            quantity:newQuantity
+          }
+        } else {
+          return prod
+        }
+      })
+      setCart(newCart)
+    }
+
     useEffect(()=>{
       setTotal(cart.reduce((acc,curr)=> acc + curr.precio * curr.quantity, 0))
     },[cart])
 
   return (
-    <CartContext.Provider value={{cart, addItem, clear, deleteProduct,inCart, total}}>{children}</CartContext.Provider>
+    <CartContext.Provider value={{cart, addItem, clear, deleteProduct,inCart, total, setCart, updateItem}}>{children}</CartContext.Provider>
   )
 }
 export default CartProvider

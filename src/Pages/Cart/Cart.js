@@ -1,15 +1,18 @@
 import React from 'react'
-import { useContext } from 'react'
+import { useContext, useState } from 'react'
 import { CartContext } from '../../context/CartContext'
 import { useNavigate } from 'react-router-dom'
 import { collection, addDoc, getFirestore, doc, updateDoc } from 'firebase/firestore'
 import "./Cart.css"
+import ItemCount from '../../Componentes/ItemCount/ItemCount'
+import ItemCart from './ItemCart'
 
 export const Cart = () => {
   const navigate= useNavigate()
   const { cart, clear, deleteProduct, total } = useContext(CartContext)
   console.log(cart)
   const db= getFirestore()
+  // const [quantity,setQuantity] = useState(0)
 
   const createOrder=()=>{
     const query= collection(db, "orders")
@@ -55,11 +58,8 @@ export const Cart = () => {
     <div className='container-cart'>
       {cart.map((prod)=>(
           <div key={prod.nombre} className="prod-cart"> 
-            <img src={`/images/${prod.imagen}`} alt={prod.nombre} />
-            <p>{prod.nombre}</p>
-            <p>{`Precio: $${prod.precio}`}</p>
-            <p>{`Cantidad: ${prod.quantity}`}</p>
-            <button id={prod.id} onClick={()=>{
+            <ItemCart prod={prod}/>
+            <button className='button-quit' id={prod.id} onClick={()=>{
               const id= prod.id
               deleteProduct(prod,id)
             }} >X</button>
