@@ -31,6 +31,7 @@ const CartProvider = ({children}) => {
                 quantity:quantity
             }
             setCart([...cart,cartProduct])
+            // console.log(`prod ${item.nombre} agregao`)
             }
 
         }

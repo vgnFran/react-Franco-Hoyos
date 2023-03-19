@@ -6,6 +6,7 @@ import { collection, addDoc, getFirestore, doc, updateDoc } from 'firebase/fires
 import "./Cart.css"
 import ItemCount from '../../Componentes/ItemCount/ItemCount'
 import ItemCart from './ItemCart'
+import Swal from 'sweetalert2'
 
 export const Cart = () => {
   const navigate= useNavigate()
@@ -38,7 +39,12 @@ export const Cart = () => {
       total:total
     } )
     .then((resp)=>{
-      alert (`Orden ${resp.id} creada`)
+      Swal.fire({
+        title:"¡Compra Realizada con Exito!",
+        text:`Orden numero: ${resp.id}`,
+        icon:"success",
+        confirmButtonText:"Finalizar"
+      })
       updateProducts()
     })
     .catch((err)=>console.log(err))
@@ -99,7 +105,12 @@ export const Cart = () => {
               </form>
               <button onClick={()=> {
                 if(formValue.email != formValue.confirm){
-                  alert("email distintos")
+                  Swal.fire({
+                    title:"Los Emails son Distintos.",
+                    text:"Los Emails deben coincidir.",
+                    icon:"error",
+                    confirmButtonText:"Volver a ingresar"
+                  })
                 } else if(formValue.name != "" && formValue.email != "" && formValue.phone != ""){
                   createOrder()
                   setCart([])

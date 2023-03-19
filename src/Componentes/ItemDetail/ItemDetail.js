@@ -29,7 +29,8 @@ const ItemDetail = ({detail}) => {
 
         <ItemCount count={count} setCount={setCount} cantidad={detail.cantidad}/>
 
-        <button disabled={detail.cantidad == 0} className="button-proDetail to-cart" onClick={()=> addItem(detail,count) }>Agregar al Carrito</button>
+        <button disabled={detail.cantidad == 0} className="button-proDetail to-cart" onClick={()=> 
+          addItem(detail,count) }>Agregar al Carrito</button>
 
         <div className="buttons-fin">
           <button className="button-proDetail left" onClick={()=>{navigate('/')}}>Seguir comprando</button>
