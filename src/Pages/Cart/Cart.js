@@ -10,17 +10,18 @@ import ItemCart from './ItemCart'
 export const Cart = () => {
   const navigate= useNavigate()
   const { cart, clear, deleteProduct, total, setCart } = useContext(CartContext)
-  console.log(cart)
   const db= getFirestore()
   const [formValue, setFormValue] = useState({
     name:"",
     phone:"",
-    email:""
+    email:"",
+    confirm:"",
   })
   const createOrder=()=>{
     const query= collection(db, "orders")
     const buyer= {
       email: formValue.email,
+      confirm:formValue.confirm,
       nombre: formValue.name,
       telefono: formValue.phone
     }
@@ -51,15 +52,14 @@ export const Cart = () => {
         cantidad: prod.cantidad - prod.quantity
       })
       .then(()=>{
-        alert("stock actualizado")
+        console.log("stock actualizado")
       })
       .catch((err)=>console.log(err))
     });
   } 
 
   const completeImputs=(e)=>{
-    console.log(e.target.value)
-    console.log(e.target.name)
+
     setFormValue({
       ...formValue,
       [e.target.name]:e.target.value,
@@ -95,9 +95,12 @@ export const Cart = () => {
                 <input type="text" placeholder='Nombre' value={formValue.name} onChange={completeImputs} name="name"/>
                 <input type="text" placeholder='Telefono' value={formValue.phone} onChange={completeImputs} name="phone"/>
                 <input type="email" placeholder='Email' value={formValue.email} onChange={completeImputs} name="email"/>
+                <input type="email" placeholder='Confirmar Email' value={formValue.confirm} onChange={completeImputs} name='confirm'/>
               </form>
               <button onClick={()=> {
-                if(formValue.name != "" && formValue.email != "" && formValue.phone != ""){
+                if(formValue.email != formValue.confirm){
+                  alert("email distintos")
+                } else if(formValue.name != "" && formValue.email != "" && formValue.phone != ""){
                   createOrder()
                   setCart([])
                 }

@@ -11,10 +11,6 @@ export default function CartWidget(){
         setTotal(cart.reduce((prev,curr)=> prev + curr.quantity, 0))
     },[cart])
 
-    console.log(cart)
-    console.log(total)
-
-    
     return (
         <div style={{display:"flex",alignItems:"center"}}>
             <BsCart/>
